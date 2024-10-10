@@ -1,23 +1,36 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+
+// import { useFirestore } from 'vuefire'
+// const db = useFirestore()
+
+
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
+ 
+  <v-app>
+    <v-container >
+    <header>
+        <v-row class="d-flex align-center">
+          <v-col cols="4" md="4">
+          <img alt="Vue logo" class="logo" src="@/assets/image.png" width="200" />
+          </v-col>
+          <v-col cols="8" md="8" class="justify-end">
+                <!-- <HelloWorld msg="Eagle eye networks" /> -->
+                <nav>
+                  <RouterLink to="/">Login</RouterLink>
+                  <RouterLink to="/about">Overview</RouterLink>
+                </nav>
+          </v-col>
+        </v-row>
+    
+    </header>
   <RouterView />
+  </v-container>
+</v-app>
 </template>
 
 <style scoped>
@@ -60,7 +73,6 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
   }
 
   .logo {
@@ -74,7 +86,7 @@ nav a:first-of-type {
   }
 
   nav {
-    text-align: left;
+    text-align: right;
     margin-left: -1rem;
     font-size: 1rem;
 
